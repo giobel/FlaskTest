@@ -1,0 +1,24 @@
+﻿Package,Project,Originator,Type,Levels and Locations,Zones and Assets,Drg_No,Drawing_Title,ARUP_BDR_ISSUE,Issue_Date,Drn_By,Ckd By,Apd By,Building Name,ARUP_BDR_SUITABILITY,Rev1,Rev2,Rev3,Rev4
+00 Cover Sheets,,,,,,101,Key Plan,T01,11/08/2018,Author,Checker,Approver,Apostles Saddle Lookout,Tender,T01,,,
+200 Foundations,SWC,AR,DR,ST,1,230,Foundation Plan,T01,7/09/2018,Author,Checker,Approver,Apostles Saddle Lookout,Tender,A,B,C,T01
+200 Foundations,SWC,AR,DR,ST,1,260,Foundation Details - Sh1,T01,7/09/2018,Author,Checker,Approver,Apostles Saddle Lookout,Tender,A,B,C,T01
+200 Foundations,SWC,AR,DR,ST,1,261,Foundation Details - Sh2,T01,7/09/2018,Author,Checker,Approver,Apostles Saddle Lookout,Tender,A,B,C,T01
+300 General Arrangement,SWC,AR,DR,ST,1,310,Top/Bottom Chord Framing Plans,T01,06/18/18,Author,Checker,Approver,Apostles Saddle Lookout,Tender,A,B,C,T01
+300 General Arrangement,SWC,AR,DR,ST,1,320,Soffit and Deck Plan,T01,7/09/2018,Author,Checker,Approver,Apostles Saddle Lookout,Tender,A,B,C,T01
+300 General Arrangement,SWC,AR,DR,ST,1,321,Catwalk Structural Details,T01,10/25/2018,Author,Checker,Approver,Apostles Saddle Lookout,Tender,A,T01,,
+300 General Arrangement,SWC,AR,DR,ST,1,330,Elevations and Sections - North Stick,T01,07/25/18,Author,Checker,Approver,Apostles Saddle Lookout,Tender,A,B,C,T01
+300 General Arrangement,SWC,AR,DR,ST,1,331,Elevations and Sections - South Stick,T01,07/25/18,Author,Checker,Approver,Apostles Saddle Lookout,Tender,A,B,C,T01
+300 General Arrangement,SWC,AR,DR,ST,1,332,Elevations and Sections - Cross Over - Sh1,T01,07/25/18,Author,Checker,Approver,Apostles Saddle Lookout,Tender,A,B,C,T01
+300 General Arrangement,SWC,AR,DR,ST,1,333,Elevations and Sections - Cross Over - Sh2,T01,10/26/2018,Author,Checker,Approver,Apostles Saddle Lookout,Tender,A,T01,,
+400 Steelwork,SWC,AR,DR,ST,1,440,Steelwork Connection Details - Sh1,T01,7/09/2018,Author,Checker,Approver,Apostles Saddle Lookout,Tender,A,B,C,T01
+400 Steelwork,SWC,AR,DR,ST,1,441,Steelwork Connection Details - Sh2,T01,7/09/2018,Author,Checker,Approver,Apostles Saddle Lookout,Tender,A,B,C,T01
+400 Steelwork,SWC,AR,DR,ST,1,442,Steelwork Connection Details - Sh3,T01,7/09/2018,Author,Checker,Approver,Apostles Saddle Lookout,Tender,A,B,C,T01
+400 Steelwork,SWC,AR,DR,ST,1,443,Welding Details,T01,10/26/2018,Author,Checker,Approver,Apostles Saddle Lookout,Tender,A,T01,,
+500 Details,SWC,AR,DR,ST,1,570,Concrete Details - Decking,T01,7/09/2018,Author,Checker,Approver,Apostles Saddle Lookout,Tender,A,B,C,T01
+500 Details,SWC,AR,DR,ST,1,571,Deck Edge Details,T01,10/26/2018,Author,Checker,Approver,Apostles Saddle Lookout,Tender,A,T01,,
+600 Retaining Wall,SWC,AR,DR,ST,1,600,Retaining wall details,T01,10/26/2018,Author,Checker,Approver,Apostles Saddle Lookout,Tender,A,T01,,
+600 Retaining Wall,SWC,AR,DR,ST,1,601,Entry/Exit Sections,T01,10/26/2018,Author,Checker,Approver,Apostles Saddle Lookout,Tender,A,T01,,
+700 Handrail,SWC,AR,DR,ST,1,710,Handrail Details,T01,10/26/2018,Author,Checker,Approver,Apostles Saddle Lookout,Tender,A,T01,,
+700 Handrail,SWC,AR,DR,ST,1,711,Windwall Details,T01,10/26/2018,Author,Checker,Approver,Apostles Saddle Lookout,Tender,A,T01,,
+700 Handrail,SWC,AR,DR,ST,1,712,Glazed Balustrade Detail,T01,10/26/2018,Author,Checker,Approver,Apostles Saddle Lookout,Tender,A,T01,,
+800 Landscape,SWC,AR,DR,ST,1,800,Landscape Details,T01,10/26/2018,Author,Checker,Approver,Apostles Saddle Lookout,Tender,A,T01,,

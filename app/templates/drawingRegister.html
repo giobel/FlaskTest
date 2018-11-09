@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+{% block title %}
+    Drawing Register
+{% endblock %}
+{% block content %}
+        <table border=1 cellpadding=7>
+            <tr>
+                <th>Sheet Number</th>
+                <th>Drawing Title</th>
+                <th>Current Revision</th>
+                <th>First Revision</th>
+                <th>Second Revision</th>
+                <th>Third Revision</th>
+                <th>Fourth Revision</th>
+
+            </tr>
+            {% for obj in object_list %}
+            <tr>
+                <td>{{ obj.Drg_No}}</td>
+                <td>{{ obj.Drawing_Title }}</td>
+                <td>{{ obj.ARUP_BDR_ISSUE}}</td>
+                <td>{{ obj.Rev1}}</td>
+                <td>{{ obj.Rev2}}</td>
+                <td>{{ obj.Rev3}}</td>
+                <td>{{ obj.Rev4}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+        {% endblock %}
