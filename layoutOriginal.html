@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>{% block title %}{% endblock %}</title>
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Bootstrap core CSS -->
+        <link href="https://blackrockdigital.github.io/startbootstrap-thumbnail-gallery/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    
+        <!-- Custom styles for this template -->
+        <style>
+    
+    ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #f1f1f1;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: #007bff;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111;
+}
+
+    body {
+      padding-top: 54px;
+    }
+    
+    @media (min-width: 80%) {
+      body {
+        padding-top: 56px;
+      }
+      .container{
+            max-width: 100%;
+        }
+    }
+        </style>
+
+    </head>
+
+    <body>
+
+        <div class="navbar">
+                <a href="{{ url_for('home') }}" class="navbar-brand">Home</a>
+                <a href="{{ url_for('sheets') }}" class="navbar-item">Sheets By Revision</a>
+                <a href="{{ url_for('getGallery') }}" class="navbar-item">Sheets By Number</a>
+                <a href="{{ url_for('model') }}" class="navbar-item">3D Model</a>
+            </div>
+        <div class="body-content">
+            {% block content %}
+            {% endblock %}
+            <hr/>
+            <footer>
+                <p>&copy; 2018</p>
+            </footer>
+        </div>
+        <script src="https://blackrockdigital.github.io/startbootstrap-thumbnail-gallery/vendor/jquery/jquery.min.js"></script>
+        <script src="https://blackrockdigital.github.io/startbootstrap-thumbnail-gallery/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>
