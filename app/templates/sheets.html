@@ -3,21 +3,21 @@
 Home
 {% endblock %}
 {% block content %}
-<a>Drawing List updated on {{date}}</a>
+
 <div class="container">
-        <div class="row text-center text-lg-left">
+                  
   {% for rev in items %}
-  <div class="row">
-          <h2>{{rev}}</h2>
-</div>
+            <h2>Revision {{rev}}</h2>
+            <div class="row">   
         {% for sheetNumber in items[rev] %}
-        <div class="col-lg-3 col-md-4 col-xs-6">
-                <a href="{{url_for('static',filename=sheetNumber + '.png')}}" class="d-block mb-4 h-100">
+        <div class="column">
+                <a href="{{url_for('static',filename=sheetNumber + '.png')}}" >
                     <img class="img-fluid img-thumbnail" src="{{url_for('static',filename=sheetNumber + '.png')}}" alt="{{sheetNumber}}">
                 </a>
         </div> 
         {% endfor %}
-  {% endfor %}
-        </div> 
 </div> 
+  {% endfor %}
+</div>
+<a>Drawing List updated on {{date}}</a>
 {% endblock %}
