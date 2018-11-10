@@ -27,3 +27,19 @@ def massageCsv(filePath):
         for key, value in sorted(sheetByRevision.items()):
                 output[value].append(key)
         return output
+
+def csvHeaders(filePath):
+        reader = csv.reader(open(filePath))
+        trans = list(map(list, zip(*reader)))
+        return [t[0] for t in trans]
+
+def csvRows(filePath):
+        return csv.reader(open(filePath))
+
+def massageCsvRevisited(filePath):
+        reader = csv.reader(open(filePath))
+        trans = list(map(list, zip(*reader)))
+        d={}
+        for row in trans:
+                d[row[0]]=row[1:]
+        return d

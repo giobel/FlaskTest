@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Elements
+{% endblock %}
+
+{% block content %}
+
+<div class="container">
+  {{title}}
+  <table border=1 cellpadding=7 contenteditable="true">
+        <tr>
+          {% for row in rows %}
+          <th>{{row}}</th>
+          {% endfor %}
+        </tr>
+        
+            {% for i in range(0,keysCount) %}
+            <tr>    
+                {% for w in rows.values() %}
+                <td>{{w[i]}}</td>
+                {% endfor %}
+          </tr>
+            {% endfor %}
+  </table>
+</div>
+
+{% endblock %}

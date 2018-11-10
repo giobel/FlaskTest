@@ -18,7 +18,6 @@ def home():
 def sheets():
     formatted_now = datetime.now().strftime("%d/%m/%y")
     items = helpers.massageCsv('./static/projectDrg.csv')
-    image_names = os.listdir('./images')
     return render_template('sheets.html', items = items, date = formatted_now)
 
 @app.route('/model')
@@ -39,6 +38,11 @@ def drawingRegister():
     object_list = helpers.get_csv()
     return render_template('drawingRegister.html', object_list=object_list)
 
+@app.route('/elements')
+def elements():
+    rows = helpers.massageCsvRevisited('./static/wall.csv')
+    keysCount = len(rows.keys())
+    return render_template('elements.html', rows = rows, keysCount = keysCount, title = "Wall Schedule")
 
 if __name__ == "__main__":
     app.run()

@@ -3,6 +3,7 @@ import collections
 import csv
 from collections import defaultdict
 
+
 APP_ROOT = os.path.dirname(os.path.abspath(__file__))
 
 target = os.path.join(APP_ROOT, 'images/')
@@ -11,7 +12,7 @@ image_names = os.listdir(target)
 
 
 def get_csv():
-    csv_path = './static/la-riots-deaths.csv'
+    csv_path = './static/projectDrg.csv'
     csv_file = open(csv_path, 'r')
     csv_obj = csv.DictReader(csv_file)
     csv_list = list(csv_obj)
@@ -87,10 +88,6 @@ for k in vi:
                         continue
                         #print (sheet)
 
-for rev in items:
-        print (rev)
-
-
 sheets = [{"Revision A":["105", "100", "106"]},{"Revision B":["230", "260", "261"]},{"Revision C":["310","311","312"]}]
 
 keys = ['a','b','c']
@@ -103,4 +100,21 @@ for i in range(0,len(keys)):
         for j in range(0,len(sh[i])):
                 dictionar.setdefault(keys[i],[]).append(sh[i][j])
 
-print(vi)
+def massageCsvRevisited(filePath):
+        reader = csv.reader(open(filePath))
+        trans = list(map(list, zip(*reader)))
+        d={}
+        for row in trans:
+                d[row[0]]=row[1:]
+        return d
+
+walls = massageCsvRevisited('./static/wall.csv')
+
+columns = defaultdict(list) # each value in each column is appended to a list
+
+values = walls.values()
+keys = walls.keys()
+
+for i in range(0,len(keys)):
+        for w in values:
+                print (w[i])
