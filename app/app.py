@@ -38,11 +38,25 @@ def drawingRegister():
     object_list = helpers.get_csv()
     return render_template('drawingRegister.html', object_list=object_list)
 
-@app.route('/elements')
-def elements():
+@app.route('/walls')
+def walls():
     rows = helpers.massageCsvRevisited('./static/wall.csv')
-    keysCount = len(rows.keys())
-    return render_template('elements.html', rows = rows, keysCount = keysCount, title = "Wall Schedule")
+    keys = [*rows.keys()]
+    keysCount = len(rows[keys[0]])
+    return render_template('walls.html', rows = rows, keysCount = keysCount, title = "Wall Schedule")
+
+@app.route('/structuralFramings')
+def structuralFramings():
+    rows = helpers.massageCsvRevisited('./static/Structural Framing Schedule.csv')
+    keys = [*rows.keys()]
+    rowsCount = len(rows[keys[0]])
+    return render_template('structuralFramings.html', rows = rows, rowsCount = rowsCount, title = "Structural Framings Schedule")
+
+@app.route('/elementSchedule')
+def elementSchedule():
+    return render_template('elementSchedule.html', title = "Element Schedule")
+
+
 
 if __name__ == "__main__":
     app.run()

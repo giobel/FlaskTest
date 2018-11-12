@@ -1,5 +1,24 @@
-Id, Type, Length, Width
-01, Type A, 1500, 250
-02, Type A, 2000, 300
-03, Type B, 3000, 150
-04, Type C, 1750,
+﻿Type Mark,Type,Width,Length,Height,Volume
+300 RC,STR-Conc Insitu Wall Nwt - (250mm),250,48574,3197,38.82 m³
+300 RC,STR-Conc Insitu Wall Nwt - (250mm),250,48574,3180,38.62 m³
+300 RC,STR-Conc Insitu Wall Nwt - (250mm),250,,,3.40 m³
+300 RC,STR-Conc Insitu Wall Nwt - (250mm),250,,,3.60 m³
+300 RC,STR-Conc Insitu Wall Nwt - (250mm),250,,,36.59 m³
+300 RC,STR-Conc Insitu Wall Nwt - (250mm),250,,,2.00 m³
+300 RC,STR-Conc Insitu Wall Nwt - (250mm),250,,,31.82 m³
+300 RC,STR-Conc Insitu Wall Nwt - (250mm),250,,,3.39 m³
+300 RC,STR-Conc Insitu Wall Nwt - (250mm),250,1115,2108,0.59 m³
+300 RC,STR-Conc Insitu Wall Nwt - (250mm),250,1561,2274,0.89 m³
+W200,STR-Conc Insitu Wall Nwt - (200mm),200,48508,998,9.68 m³
+W200,STR-Conc Insitu Wall Nwt - (200mm),200,,,0.88 m³
+W200,STR-Conc Insitu Wall Nwt - (200mm),200,,,1.07 m³
+W200,STR-Conc Insitu Wall Nwt - (200mm),200,,,0.57 m³
+W200,STR-Conc Insitu Wall Nwt - (200mm),200,,,11.61 m³
+W200,STR-Conc Insitu Wall Nwt - (200mm),200,,,13.13 m³
+W200,STR-Conc Insitu Wall Nwt - (200mm),200,14097,1006,2.84 m³
+W200,STR-Conc Insitu Wall Nwt - (200mm),200,29333,1003,5.89 m³
+W200,STR-Conc Insitu Wall Nwt - (200mm),200,1083,726,0.16 m³
+W200,STR-Conc Insitu Wall Nwt - (200mm),200,320,800,0.05 m³
+W200,STR-Conc Insitu Wall Nwt - (200mm),200,1538,636,0.20 m³
+W200,STR-Conc Insitu Wall Nwt - (200mm),200,319,680,0.04 m³
+Grand total: 22,,,,,

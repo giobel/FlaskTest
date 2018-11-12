@@ -108,8 +108,31 @@ def massageCsvRevisited(filePath):
                 d[row[0]]=row[1:]
         return d
 
-walls = massageCsvRevisited('./static/wall.csv')
+#walls = massageCsvRevisited('./static/structuralFramings.csv')
 
+
+def parseTxt(filePath):
+        f = open(filePath,'r')
+        rows = []
+        text = f.readlines()
+        for t in text:
+                t.split(',')
+                rows.append(t)
+        return rows
+
+#rows = massageCsvRevisited('./static/Structural Framing Schedule.csv')
+
+rows = massageCsvRevisited('./static/wall.csv')
+keys = [*rows.keys()]
+rowsCount = len(rows[keys[0]])
+
+for i in range(0,rowsCount):
+         for w in rows.values():
+                print(w[i])
+
+
+
+"""
 columns = defaultdict(list) # each value in each column is appended to a list
 
 values = walls.values()
@@ -118,3 +141,17 @@ keys = walls.keys()
 for i in range(0,len(keys)):
         for w in values:
                 print (w[i])
+
+content = os.listdir(APP_ROOT+'\static')
+
+images = []
+for c in content: 
+        if 'png' in c:
+                name = c.split(' ')
+                try:
+                        images.append(name[4])
+                except:
+                        continue
+
+print(images)
+"""
