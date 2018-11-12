@@ -1,12 +1,14 @@
 
   {{title}}
-  <table border=1 cellpadding=7 contenteditable="true">
+  <table class="table table-striped table-hover" contenteditable="true">
+      <thead>  
         <tr>
           {% for row in rows %}
-          <th>{{row}}</th>
+          <th scope="col">{{row}}</th>
           {% endfor %}
         </tr>
-        
+        </thead>
+        <tbody>
             {% for i in range(0,keysCount) %}
             <tr>    
                 {% for w in rows.values() %}
@@ -14,5 +16,6 @@
                 {% endfor %}
           </tr>
             {% endfor %}
+          </tbody>
   </table>
 

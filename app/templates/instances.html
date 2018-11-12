@@ -4,14 +4,15 @@ Structural Framings Instances
 {% endblock %}
 {% block content %}
 
-
-<table border=1 cellpadding=7 contenteditable="true">
-    <tr>
+<table class="table table-sm table-hover table-responsive-sm" contenteditable="true">
+        <thead>
+        <tr>
         {% for h in tableHeaders %}
-      <th>{{h}}</th>
+      <th scope="col">{{h}}</th>
       {% endfor %}
     </tr>
-    
+    </thead>
+<tbody>
     {% for items in tableValues %}
     <tr>
         {% for i in items %}
@@ -19,7 +20,7 @@ Structural Framings Instances
         {% endfor %}
     </tr>
     {% endfor %}
-    
+</tbody>
 </table>
 
 

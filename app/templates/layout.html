@@ -1,122 +1,77 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
-        <meta charset="utf-8" />
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <title>{% block title %}{% endblock %}</title>
         
-        <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- Bootstrap core CSS -->
-        <link href="https://blackrockdigital.github.io/startbootstrap-thumbnail-gallery/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link href="{{url_for('static', filename = 'css/bootstrap.min.css')}}" rel="stylesheet">
     
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 
-        
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-
-<!-- Custom styles for this template -->
         <style>
-    
-    ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #f1f1f1;
-}
 
-li {
-    float: left;
-}
 
-li a {
-    display: block;
+.navbar-light .navbar-nav .nav-link {
+color: #007bff;
+}
+.navbar-light .navbar-nav .active > .nav-link{
+    color: red;
+}
+.dropdown-item{
     color: #007bff;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
-
-p{
-    align-content: center;
-}
-
-    body {
-      padding-top: 0px;
-      align-content: center;
-      align-self: center;
-      
-    }
-
-    div.body-content{
-        padding-left: 0%;
-    }
-
-
-footer{
-    padding-bottom: 0px;
-}
-
-.img{
-    width: 75%;
-}
-
-
-.row {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 0 4px;
-}
-
-/* Create four equal columns that sits next to each other */
-.column {
-  flex: 25%;
-  max-width: 25%;
-  padding: 0 4px;
-}
-
-.column img {
-  margin-top: 8px;
-  vertical-align: middle;
-}
-
-/* Responsive layout - makes a two column-layout instead of four columns */
-@media screen and (max-width: 800px) {
-  .column {
-    flex: 50%;
-    max-width: 50%;
-  }
-}
-
-/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
-  .column {
-    flex: 100%;
-    max-width: 100%;
-  }
-}
-
-
+} 
+        
         </style>
-
     </head>
+<header>
 
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">OveMel</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="{{ url_for('home') }}">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{ url_for('drawingRegister') }}">Drawing Register</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Sheets
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="{{ url_for('getGallery') }}">Sheets By Number</a>
+                <a class="dropdown-item" href="{{ url_for('sheets') }}">Sheets By Revision</a>
+              </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('model') }}">3D Model</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('elementSchedule') }}">Element Types</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('instances') }}">Element Instances</a>
+              </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          </form>
+        </div>
+      </nav>
+</header>
     <body>
-            
-            <ul>              
-                <li><a href="{{ url_for('home') }}" class="navbar-item">Home</a></li>
-                <li><a href="{{ url_for('drawingRegister') }}" class="navbar-item">Drawing Register</a></li>
-                <li><a href="{{ url_for('sheets') }}" class="navbar-item">Sheets By Revision</a></li>
-                <li><a href="{{ url_for('getGallery') }}" class="navbar-item">Sheets By Number</a></li>
-                <li><a href="{{ url_for('model') }}" class="navbar-item">3D Model</a></li>
-                <li><a href="{{ url_for('elementSchedule') }}" class="navbar-item">Model Elements</a></li>
-                <li><a href="{{ url_for('instances') }}" class="navbar-item">Instances</a></li>
-            </ul>
-            <br>
-        <div class="body-content">
+            <div class="container-fluid">
             {% block content %}
             {% endblock %}
         </div>
-        <script src="https://blackrockdigital.github.io/startbootstrap-thumbnail-gallery/vendor/jquery/jquery.min.js"></script>
-        <script src="https://blackrockdigital.github.io/startbootstrap-thumbnail-gallery/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     </body>
     <hr/>
     <footer>
