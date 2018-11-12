@@ -6,7 +6,10 @@ import csv
 from collections import defaultdict
 import helpers
 
+
 app = Flask(__name__)
+
+
 
 APP_ROOT = os.path.dirname(os.path.abspath(__file__))
 
@@ -56,6 +59,13 @@ def structuralFramings():
 def elementSchedule():
     return render_template('elementSchedule.html', title = "Element Schedule")
 
+@app.route('/instances')
+def instances():
+    cnx = helpers.connectDB('swc_asl')
+    tableName = 'walls'
+    tableHeaders = helpers.getTableColumnNames(cnx, tableName)
+    tableValues = helpers.getTableValues(cnx, tableName)
+    return render_template('instances.html', tableHeaders = tableHeaders, tableValues = tableValues)
 
 
 if __name__ == "__main__":

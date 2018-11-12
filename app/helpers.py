@@ -3,6 +3,8 @@ from datetime import datetime
 import re
 import csv
 from collections import defaultdict
+import mysql.connector
+
 
 
 def get_csv():
@@ -43,3 +45,18 @@ def massageCsvRevisited(filePath):
         for row in trans:
                 d[row[0]]=row[1:]
         return d
+
+def connectDB(dbName):
+        cnx = mysql.connector.connect(user='root', password='', host='127.0.0.1', database=dbName)
+        return cnx
+
+def getTableColumnNames(cnx, tableName):
+        cursor = cnx.cursor()
+        cursor.execute('SHOW COLUMNS FROM ' + tableName)
+        return [c[0] for c in cursor]
+
+def getTableValues(cnx, tableName):
+        cursor = cnx.cursor()
+        query = ("SELECT * FROM " + tableName)
+        cursor.execute(query)
+        return [c for c in cursor]

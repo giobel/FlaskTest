@@ -2,7 +2,8 @@ import os
 import collections
 import csv
 from collections import defaultdict
-
+import mysql.connector
+from mysql.connector import errorcode
 
 APP_ROOT = os.path.dirname(os.path.abspath(__file__))
 
@@ -125,10 +126,52 @@ def parseTxt(filePath):
 rows = massageCsvRevisited('./static/wall.csv')
 keys = [*rows.keys()]
 rowsCount = len(rows[keys[0]])
-
+"""
 for i in range(0,rowsCount):
          for w in rows.values():
                 print(w[i])
+"""
+
+
+cnx = mysql.connector.connect(user='root', password='', host='127.0.0.1', database='swc_asl')
+cursor = cnx.cursor()
+"""
+query = ("SELECT * FROM `structuralframing` WHERE `Length` >= '10.0'")
+
+cursor.execute(query)
+
+result = []
+for a in cursor:
+  result.append(a)
+
+print([r for r in result])
+"""
+
+columns = ("SELECT * FROM `structuralframing` WHERE `Length` >= '10.0'")
+
+
+def getTableColumnNames(cnx, tableName):
+        cursor = cnx.cursor()
+        cursor.execute('SHOW COLUMNS FROM ' + tableName)
+        return [c[0] for c in cursor]
+
+names = getTableColumnNames(cnx, 'structuralframing')
+
+
+def getTableValues(cnx, tableName):
+        cursor = cnx.cursor()
+        query = ("SELECT * FROM " + tableName)
+        cursor.execute(query)
+        return [c for c in cursor]
+
+
+
+
+tv = getTableValues(cnx, 'structuralframing')
+
+for t in tv:
+        for i in t:
+                print (i)
 
 
 
